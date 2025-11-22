@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ia#2 DripCase</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="left">
+    <img src="assets/menu-icon-19353.png" class="icon" id="menuIcon" alt="Menu" />
+    <img src="assets/search-icon-png-9969.png" class="icon" id="searchIcon" alt="Search" />
+  </div>
+
+  <div class="center">
+    <img src="assets/logo.png" alt="Logo" class="logo" />
+  </div>
+
+<div class="right">
+  <div id="profileContainer" class="profile-container">
+    <img id="profileIcon" src="assets/account-icon-25499.png" alt="Account" />
+    <span id="profileInitial" class="profile-initial"></span>
+    <span id="profileName" class="profile-name"></span>
+  </div>
+
+  <!-- Cart icon links to cart page -->
+ <a href="cart.html">
+  <img src="assets/grocery-cart-icon-7502.png" class="icon" id="cartIcon" alt="Cart" />
+</a>
+
+</div>
+
+
+</header>
+
+<!-- Dropdowns -->
+<div class="dropdown" id="menuDropdown">
+  <strong>Shop By Type</strong>
+  <a href="#">Phone Cases</a>
+  <a href="#">AirPod Covers</a>
+  <a href="#">Laptop Skins</a>
+
+  <strong>Shop By Device</strong>
+  <a href="#">iPhone</a>
+  <a href="#">Samsung</a>
+  <a href="#">AirPods</a>
+</div>
+
+<div class="dropdown" id="searchDropdown">
+  <input type="text" placeholder="Search products..." />
+</div>
+
+<div class="dropdown" id="accountDropdown">
+  <button>Login</button>
+  <button>Sign Up</button>
+</div>
+
+<!-- Full-screen slideshow -->
+<section class="slideshow">
+  <div class="slide active"><img src="assets/blue.png" alt="Case 1"></div>
+  <div class="slide"><img src="assets/red.png" alt="Case 2"></div>
+  <div class="slide"><img src="assets/yellow.png" alt="Case 3"></div>
+
+  <button class="prev">❮</button>
+  <button class="next">❯</button>
+</section>
+
+<section class="products">
+  <h2 style="text-align: center;">Products</h2>
+
+  <!-- iPhone Cases -->
+  <h3>Iphone Cases</h3>
+  <div class="product-grid phone-cases-grid">
+    <div class="product">
+      <div class="img-container">
+        <img src="assets/iphone red.png" alt="iPhone Case 1">
+        <button class="hoverAddBtn addToCartBtn" data-name="iPhone Red Case" data-price="1500">Add to Cart</button>
+      </div>
+      <p>iPhone Red Case</p>
+      <p>$1500.00</p>
+    </div>
+    <div class="product">
+      <div class="img-container">
+        <img src="assets/iphone green.png" alt="iPhone Case 2">
+        <button class="hoverAddBtn addToCartBtn" data-name="iPhone Green Case" data-price="1500">Add to Cart</button>
+      </div>
+      <p>iPhone Green Case</p>
+      <p>$1500.00</p>
+    </div>
+    <div class="product">
+      <div class="img-container">
+        <img src="assets/iphone orange.png" alt="iPhone Case 3">
+        <button class="hoverAddBtn addToCartBtn" data-name="iPhone Orange Case" data-price="1500">Add to Cart</button>
+      </div>
+      <p>iPhone Orange Case</p>
+      <p>$1500.00</p>
+    </div>
+    <div class="product">
+      <div class="img-container">
+        <img src="assets/iphone blue.png" alt="iPhone Case 4">
+        <button class="hoverAddBtn addToCartBtn" data-name="iPhone Blue Case" data-price="1500">Add to Cart</button>
+      </div>
+      <p>iPhone Blue Case</p>
+      <p>$1500.00</p>
+    </div>
+    <div class="product">
+      <div class="img-container">
+        <img src="assets/iphone purple.png" alt="iPhone Case 5">
+        <button class="hoverAddBtn addToCartBtn" data-name="iPhone Purple Case" data-price="1500">Add to Cart</button>
+      </div>
+      <p>iPhone Purple Case</p>
+      <p>$1500.00</p>
+    </div>
+    <div class="product">
+      <div class="img-container">
+        <img src="assets/iphone grey.png" alt="iPhone Case 6">
+        <button class="hoverAddBtn addToCartBtn" data-name="iPhone Grey Case" data-price="1500">Add to Cart</button>
+      </div>
+      <p>iPhone Grey Case</p>
+      <p>$1500.00</p>
+    </div>
+  </div>
+
+  <!-- Samsung S25 Cases -->
+  <h3>Samsung S25 Cases</h3>
+  <div class="product-grid phone-cases-grid">
+    <div class="product">
+      <div class="img-container">
+        <img src="assets/sam red.png" alt="Samsung Case 1">
+        <button class="hoverAddBtn addToCartBtn" data-name="Sam Red Case" data-price="1500">Add to Cart</button>
+      </div>
+      <p>Samsung S25 Red Case</p>
+      <p>$1500.00</p>
+    </div>
+    <div class="product">
+      <div class="img-container">
+        <img src="assets/sam orange.png" alt="Samsung Case 2">
+        <button class="hoverAddBtn addToCartBtn" data-name="Sam Orange Case" data-price="1500">Add to Cart</button>
+      </div>
+      <p>Samsung S25 Orange Case</p>
+      <p>$1500.00</p>
+    </div>
+    <div class="product">
+      <div class="img-container">
+        <img src="assets/sam yellow.png" alt="Samsung Case 3">
+        <button class="hoverAddBtn addToCartBtn" data-name="Sam Yellow Case" data-price="1500">Add to Cart</button>
+      </div>
+      <p>Samsung S25 Yellow Case</p>
+      <p>$1500.00</p>
+    </div>
+    <div class="product">
+      <div class="img-container">
+        <img src="assets/sam green.png" alt="Samsung Case 4">
+        <button class="hoverAddBtn addToCartBtn" data-name="Sam Green Case" data-price="1500">Add to Cart</button>
+      </div>
+      <p>Samsung S25 Green Case</p>
+      <p>$1500.00</p>
+    </div>
+    <div class="product">
+      <div class="img-container">
+        <img src="assets/sam blue.png" alt="Samsung Case 5">
+        <button class="hoverAddBtn addToCartBtn" data-name="Sam Blue Case" data-price="1500">Add to Cart</button>
+      </div>
+      <p>Samsung S25 Blue Case</p>
+      <p>$1500.00</p>
+    </div>
+    <div class="product">
+      <div class="img-container">
+        <img src="assets/sam purple.png" alt="Samsung Case 6">
+        <button class="hoverAddBtn addToCartBtn" data-name="Sam Purple Case" data-price="1500">Add to Cart</button>
+      </div>
+      <p>Samsung S25 Purple Case</p>
+      <p>$1500.00</p>
+    </div>
+  </div>
+
+  <!-- AirPod Covers -->
+  <h3>AirPod Covers</h3>
+  <div class="product-grid airpods-grid">
+    <div class="product">
+      <div class="img-container">
+        <img src="assets/airpod black.png" alt="AirPods 1/2">
+        <button class="hoverAddBtn addToCartBtn" data-name="AirPods Black" data-price="1000">Add to Cart</button>
+      </div>
+      <p>AirPods Black</p>
+      <p>$1000.00</p>
+    </div>
+    <div class="product">
+      <div class="img-container">
+        <img src="assets/airpod blue.png" alt="AirPods Pro">
+        <button class="hoverAddBtn addToCartBtn" data-name="AirPods Blue" data-price="1000">Add to Cart</button>
+      </div>
+      <p>AirPods Blue</p>
+      <p>$1000.00</p>
+    </div>
+    <div class="product">
+      <div class="img-container">
+        <img src="assets/airpod green.png" alt="AirPods Max">
+        <button class="hoverAddBtn addToCartBtn" data-name="AirPods Green" data-price="1000">Add to Cart</button>
+      </div>
+      <p>AirPods Green</p>
+      <p>$1000.00</p>
+    </div>
+    <div class="product">
+      <div class="img-container">
+        <img src="assets/airpod red.png" alt="AirPods 3rd Gen">
+        <button class="hoverAddBtn addToCartBtn" data-name="AirPods Red" data-price="1000">Add to Cart</button>
+      </div>
+      <p>AirPods Red</p>
+      <p>$1000.00</p>
+    </div>
+  </div>
+
+  <!-- Laptop Skins -->
+  <h3 style="text-align: center;">Laptop Skins</h3>
+  <div class="product-grid laptop-skins-grid">
+    <div class="product">
+      <div class="img-container">
+        <img src="assets/lap skin blue.png" alt="MacBook Skin">
+        <button class="hoverAddBtn addToCartBtn" data-name="Lap Blue Skin" data-price="2000">Add to Cart</button>
+      </div>
+      <p>MacBook Skin Blue</p>
+      <p>$2000.00</p>
+    </div>
+    <div class="product">
+      <div class="img-container">
+        <img src="assets/lap skin brown.png" alt="Windows Laptop Skin">
+        <button class="hoverAddBtn addToCartBtn" data-name="Lap Brown Skin" data-price="2000">Add to Cart</button>
+      </div>
+      <p>MacBook Skin Brown</p>
+      <p>$2000.00</p>
+    </div>
+    <div class="product">
+      <div class="img-container">
+        <img src="assets/lap skin red.png" alt="Surface Laptop Skin">
+        <button class="hoverAddBtn addToCartBtn" data-name="Lap Red Skin" data-price="2000">Add to Cart</button>
+      </div>
+      <p>MacBook Skin Red</p>
+      <p>$2000.00</p>
+    </div>
+    <div class="product">
+      <div class="img-container">
+        <img src="assets/lap skin green.png" alt="Other Laptop Skin">
+        <button class="hoverAddBtn addToCartBtn" data-name="Lap Green Skin" data-price="2000">Add to Cart</button>
+      </div>
+      <p>MacBook Skin Green</p>
+      <p>$2000.00</p>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- Sign In Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" data-close="loginModal">&times;</span>
+    <h2>Login</h2>
+
+    <input type="email" placeholder="Email" id="loginEmail">
+    <input type="password" placeholder="Password" id="loginPassword">
+
+    <button class="submit-btn" id="loginBtn">Login</button>
+
+    <p>Don't have an account? 
+      <span class="link" id="openSignUp">Sign Up</span>
+    </p>
+  </div>
+</div>
+
+<!-- Sign Up Modal -->
+<div id="signupModal" class="modal">
+  <div class="modal-content">
+    <span class="close" data-close="signupModal">&times;</span>
+    <h2>Sign Up</h2>
+
+    <input type="text" placeholder="Full Name" id="signupName">
+    <input type="email" placeholder="Email" id="signupEmail">
+    <input type="password" placeholder="Password" id="signupPassword">
+
+    <button class="submit-btn"  id="signupBtn">Create Account</button>
+
+    <p>Already have an account?
+      <span class="link" id="openLogin">Login</span>
+    </p>
+  </div>
+</div>
+<div id="successMessage" class="success-popup">
+Congratulations! You have successfully signed up.
+</div>
+
+<!-- Logout Modal -->
+<div id="logoutModal" class="modal">
+  <div class="modal-content">
+    <span class="close" data-close="logoutModal">&times;</span>
+    <h2>Logout</h2>
+    <p>Are you sure you want to logout?</p>
+    <button class="submit-btn" id="confirmLogout">Yes, Logout</button>
+    <button class="submit-btn" id="cancelLogout">Cancel</button>
+  </div>
+</div>
+
+<section class="about-section">
+  <h2>About Us</h2>
+
+  <div class="about-box">
+    <p><strong>Full Name:</strong> Roheem Brown</p>
+    <p><strong>ID#:</strong> 2301100</p>
+    <p><strong>Email:</strong>
+      <a href="mailto:ROHEEMABROWN@students.utech.edu.jm">ROHEEMABROWN@students.utech.edu.jm</a>
+    </p>
+    <p><strong>Module Code:</strong> CIT2011</p>
+    <p><strong>Assignment Name:</strong> Individual Assgingment #2</p>
+    <p><strong>Day/Time:</strong> Wednesday,10:00am</p>
+
+    <br>
+
+    <p>
+      DripCase provides stylish, durable tech accessories built for everyone. 
+      Our designs bring together protection, personality, and premium quality.  
+      We offer high-quality phone cases, AirPod covers, and laptop skins crafted 
+      to fit your style and keep your devices protected.
+    </p>
+
+    <p>
+      For questions or feedback, click the email link above to contact us.
+    </p>
+  </div>
+</section>
+
+
+<script>
+
+function updateProfile(user) {
+  const profileIcon = document.getElementById("profileIcon");
+  const profileInitial = document.getElementById("profileInitial");
+  const profileName = document.getElementById("profileName");
+
+  // Hide default image
+  profileIcon.style.display = "none";
+
+  // Show initial
+  profileInitial.style.display = "flex";
+  profileInitial.textContent = user.name.charAt(0).toUpperCase();
+
+  // Show full name
+  profileName.style.display = "inline"; // show name
+  profileName.textContent = user.name;
+}
+ 
+
+const logoutModal = document.getElementById("logoutModal");
+const profileIcon = document.getElementById("profileIcon");
+const profileInitial = document.getElementById("profileInitial");
+const profileNameEl = document.getElementById("profileName");
+
+const profileContainer = document.getElementById("profileContainer");
+
+profileContainer.onclick = () => {
+  if (profileNameEl.style.display !== "none") {
+    logoutModal.style.display = "flex";
+  } else {
+    document.getElementById("loginModal").style.display = "flex";
+  }
+};
+
+document.getElementById("confirmLogout").onclick = () => {
+  profileIcon.style.display = "flex";
+  profileInitial.style.display = "none";
+  profileNameEl.style.display = "none";
+  localStorage.removeItem("dripcaseUser");
+  logoutModal.style.display = "none";
+};
+
+document.getElementById("cancelLogout").onclick = () => {
+  logoutModal.style.display = "none";
+};
+
+// Sign-up button
+document.querySelector("#signupModal .submit-btn").addEventListener("click", () => {
+  const name = document.getElementById("signupName").value;
+  const email = document.getElementById("signupEmail").value;
+  const password = document.getElementById("signupPassword").value;
+
+  if (!name || !email || !password) {
+    alert("Please fill out all fields.");
+    return;
+  }
+
+  const user = { name, email, password };
+  localStorage.setItem("dripcaseUser", JSON.stringify(user));
+
+  // Update profile UI
+  updateProfile(user);
+
+  // Show success popup
+  const msg = document.getElementById("successMessage");
+  msg.style.top = "20px";
+  setTimeout(() => { msg.style.top = "-80px"; }, 3000);
+
+  // Close modal
+  document.getElementById("signupModal").style.display = "none";
+});
+
+// Optional: Login button
+document.querySelector("#loginModal .submit-btn").addEventListener("click", () => {
+  const email = document.getElementById("loginEmail").value;
+  const password = document.getElementById("loginPassword").value;
+
+  const savedUser = JSON.parse(localStorage.getItem("dripcaseUser"));
+
+  if (!savedUser) {
+    alert("No account found. Please sign up first.");
+    return;
+  }
+
+  if (email === savedUser.email && password === savedUser.password) {
+    updateProfile(savedUser); // update profile on login
+    alert("Login successful!");
+    document.getElementById("loginModal").style.display = "none";
+  } else {
+    alert("Incorrect email or password.");
+  }
+});
+
+
+    // Slideshow
+const slides = document.querySelectorAll('.slide');
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+let index = 0;
+
+function showSlide(n) {
+  slides.forEach((slide, i) => slide.classList.toggle('active', i === n));
+}
+
+function nextSlide() {
+  index = (index + 1) % slides.length;
+  showSlide(index);
+}
+
+function prevSlide() {
+  index = (index - 1 + slides.length) % slides.length;
+  showSlide(index);
+}
+
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
+setInterval(nextSlide, 4000);
+
+// Dropdowns click
+function toggleDropdown(iconId, dropdownId) {
+  const icon = document.getElementById(iconId);
+  const dropdown = document.getElementById(dropdownId);
+
+  icon.addEventListener('click', e => {
+    e.stopPropagation();
+    dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+  document.addEventListener('click', e => {
+    if (!dropdown.contains(e.target) && e.target !== icon) {
+      dropdown.style.display = 'none';
+    }
+  });
+}
+
+
+// Open Sign Up modal from login modal
+document.getElementById("openSignUp").addEventListener("click", () => {
+  document.getElementById("loginModal").style.display = "none";
+  document.getElementById("signupModal").style.display = "flex";
+});
+
+document.querySelectorAll(".close").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const modalId = btn.dataset.close;
+    document.getElementById(modalId).style.display = "none";
+  });
+});
+
+document.querySelectorAll(".addToCartBtn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const name = btn.dataset.name;
+    const price = parseFloat(btn.dataset.price);
+    let cart = JSON.parse(localStorage.getItem("dripcaseCart")) || [];
+
+    const existing = cart.find(item => item.name === name);
+    if (existing) {
+      existing.quantity += 1;
+    } else {
+      cart.push({ name, price, quantity: 1 });
+    }
+
+    localStorage.setItem("dripcaseCart", JSON.stringify(cart));
+    alert(`${name} added to cart`);
+  });
+});
+
+
+// Check if user is logged in on page load
+const savedUser = JSON.parse(localStorage.getItem("dripcaseUser"));
+if (savedUser) {
+  updateProfile(savedUser);
+} else {
+  document.getElementById("profileIcon").style.display = "flex";
+  document.getElementById("profileInitial").style.display = "none";
+  document.getElementById("profileName").style.display = "none";
+}
+function showDropdown(target) {
+  document.querySelectorAll('.dropdown').forEach(d => {
+    if (d.id === target) {
+      d.style.display = d.style.display === 'flex' ? 'none' : 'flex';
+    } else {
+      d.style.display = 'none';
+    }
+  });
+}
+
+document.getElementById("menuIcon").onclick = e => {
+  e.stopPropagation();
+  showDropdown("menuDropdown");
+};
+
+document.getElementById("searchIcon").onclick = e => {
+  e.stopPropagation();
+  showDropdown("searchDropdown");
+};
+
+document.addEventListener("click", () => {
+  document.querySelectorAll('.dropdown').forEach(d => d.style.display = 'none');
+});
+
+</script>
+<!-- Or cart icon with JS -->
+<script>
+document.getElementById("cartIcon").addEventListener("click", () => {
+  window.location.href = "cart.html";
+});
+
+</script>
+</body>
+</html>

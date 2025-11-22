@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DripCase Cart</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>DripCase Cart</h1>
+  <a href="index.html">Continue Shopping</a>
+</header>
+
+<section class="cart-container">
+  <table id="cartTable">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="cart-summary">
+    <p id="cartTotal">Total: $0.00</p>
+    <button id="checkoutBtn">Checkout</button>
+  </div>
+</section>
+
+<script >
+    // Load cart from localStorage
+let cart = JSON.parse(localStorage.getItem("dripcaseCart")) || [];
+
+const cartTableBody = document.querySelector("#cartTable tbody");
+const cartTotalEl = document.getElementById("cartTotal");
+
+function renderCart() {
+  cartTableBody.innerHTML = "";
+
+  let total = 0;
+  cart.forEach((item, index) => {
+    const itemTotal = item.price * item.quantity;
+    total += itemTotal;
+
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${item.name}</td>
+      <td>$${item.price.toFixed(2)}</td>
+      <td>
+        <input type="number" min="1" value="${item.quantity}" data-index="${index}" class="qtyInput"/>
+      </td>
+      <td>$${itemTotal.toFixed(2)}</td>
+      <td><button class="removeBtn" data-index="${index}">Remove</button></td>
+    `;
+    cartTableBody.appendChild(row);
+  });
+
+  cartTotalEl.textContent = `Total: $${total.toFixed(2)}`;
+  localStorage.setItem("dripcaseCart", JSON.stringify(cart));
+
+  // Add event listeners
+  document.querySelectorAll(".removeBtn").forEach(btn => {
+    btn.addEventListener("click", e => {
+      const idx = e.target.dataset.index;
+      cart.splice(idx, 1);
+      renderCart();
+    });
+  });
+
+  document.querySelectorAll(".qtyInput").forEach(input => {
+    input.addEventListener("change", e => {
+      const idx = e.target.dataset.index;
+      const val = parseInt(e.target.value);
+      if (val > 0) {
+        cart[idx].quantity = val;
+      } else {
+        cart[idx].quantity = 1;
+      }
+      renderCart();
+    });
+  });
+}
+
+// Checkout button
+document.getElementById("checkoutBtn").addEventListener("click", () => {
+  if (cart.length === 0) {
+    alert("Your cart is empty!");
+    return;
+  }
+  alert("Thank you for your purchase!");
+  cart = [];
+  localStorage.setItem("dripcaseCart", JSON.stringify(cart));
+  renderCart();
+});
+
+renderCart();
+
+</script>
+</body>
+</html>
